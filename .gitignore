@@ -1,2 +1,6 @@
 node_modules
 .aws.json
+
+/newrelic_agent.log
+/newrelic.js
+/newrelic.js:Zone.Identifier
