@@ -4,7 +4,7 @@ import http from 'k6/http';
 import { sleep } from 'k6';
 
 const review = {
-  product_id: Math.floor(Math.random() * 10000001).toString(),
+  product_id: Math.floor(Math.random() * 1000001).toString(),
   username: 'Billy Joe',
   title: 'Some Random Title',
   review: 'Random Paragraph that might mean something important',
