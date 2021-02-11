@@ -3,6 +3,16 @@
 import http from 'k6/http';
 import { sleep } from 'k6';
 
+export const options = {
+  // target is the VUs
+  stages: [
+    { duration: '1s', target: 20 },
+    { duration: '1s', target: 100},
+    { duration: '60s', target: 500 },
+  ],
+};
+
+
 const review = {
   product_id: Math.floor(Math.random() * 1000001).toString(),
   username: 'Billy Joe',
@@ -19,6 +29,6 @@ const review = {
 };
 
 export default function () {
-  http.post('http://18.207.245.5:3000/reviews', review);
+  http.post('http://54.91.112.142:3000/reviews', review);
   sleep(1);
 }
